@@ -1,0 +1,160 @@
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+@media (max-width: 75em) {
+  .input-btn-container {
+    gap: 3rem;
+  }
+
+  .header-container {
+    gap: 3rem;
+  }
+
+  .favorite-cart-btn-container {
+    gap: 1.6rem;
+  }
+
+  .search-input {
+    width: 30rem;
+  }
+
+  .product-content {
+    max-width: 200px;
+  }
+
+  .product-title {
+    font-size: 2rem;
+  }
+
+  .product-detail {
+    padding: 1.2rem 1.6rem;
+  }
+
+  .payout-container {
+    padding: 0rem 2.4rem 2.4rem 2.4rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+@media (max-width: 59em) {
+  .logo-container {
+    gap: 0.6rem;
+  }
+  .logo-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .logo-text {
+    font-size: 2.4rem;
+  }
+  .input-btn-container {
+    gap: 2.4rem;
+  }
+
+  .header-container {
+    gap: 2.4rem;
+  }
+
+  .favorite-cart-btn-container {
+    gap: 1.4rem;
+  }
+
+  .search-input {
+    width: 20rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/**************************/
+/* BELOW 720px (Smaller tablets) */
+/**************************/
+@media (max-width: 45em) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .input-btn-container {
+    gap: 2rem;
+  }
+
+  .header-container {
+    gap: 2rem;
+    padding: 0.4rem 1.6rem;
+  }
+
+  .favorite-cart-btn-container {
+    gap: 1rem;
+  }
+
+  .search-input {
+    width: 15rem;
+  }
+
+  .btn {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .my-favorites-not-found {
+    padding: 19.2rem 9.6rem;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+  }
+}
+
+/**************************/
+/* BELOW 560px (Phones) */
+/**************************/
+@media (max-width: 37em) {
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 2.4rem;
+    height: 15rem;
+    gap: 2.4rem;
+  }
+
+  .input-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  .search-input {
+    width: 20rem;
+  }
+
+  .product-content {
+    max-width: 150px;
+  }
+
+  .product-title {
+    font-size: 1.6rem;
+  }
+
+  .product-detail {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .product-text {
+    font-size: 1.4rem;
+    gap: 1.4rem;
+  }
+
+  .btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 1.2rem;
+  }
+
+  .cart-content {
+    padding: 0 2.4rem 1.6rem 2.4rem;
+  }
+
+  .cart-popup {
+    padding: 2rem;
+  }
+}

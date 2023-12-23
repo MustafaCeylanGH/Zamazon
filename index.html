@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zamazon</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-container">
+        <div class="logo-container">
+          <ion-icon
+            class="logo-icon"
+            name="return-down-forward-outline"
+          ></ion-icon>
+          <h1 class="logo-text">Zamazon</h1>
+        </div>
+        <div class="input-btn-container">
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search product..."
+              list="product-list"
+            />
+            <ul class="product-list"></ul>
+            <button class="search-btn">
+              <ion-icon class="search-icon" name="search-outline"></ion-icon>
+            </button>
+          </div>
+          <div class="favorite-cart-btn-container">
+            <div class="my-favorites-container">
+              <ion-icon
+                class="my-favorites-icon"
+                name="heart-outline"
+              ></ion-icon>
+              <button class="btn my-favorites-btn">My Favorites</button>
+            </div>
+            <div class="my-cart-container">
+              <ion-icon class="my-cart-icon" name="cart-outline"></ion-icon>
+              <button class="btn my-cart-btn">My Cart</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- PRODUCT   -->
+      <div class="product-not-found hidden">
+        Product is not found. Please try searching for another product.
+      </div>
+      <div class="my-favorites-not-found hidden">
+        Favorite products is not found. Please add products to your favorites.
+      </div>
+
+      <div class="product-container">
+        <div class="product-content">
+          <img class="product-img" src="Img/Meat.jpg" />
+          <p class="product-title">Meat</p>
+          <div class="product-detail">
+            <ul class="product-text">
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="bag-add-outline"
+                  ></ion-icon>
+                  <p>Piece: <span>1</span> kg</p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="pricetag-outline"
+                  ></ion-icon>
+                  <p>Price: <span>$10</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <button class="btn add-to-cart-btn">Add to cart</button>
+                  <button class="product-fav-btn">
+                    <ion-icon
+                      class="my-favorites-icon"
+                      name="heart-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <img class="product-img" src="Img/Cheese.jpg" />
+          <p class="product-title">Cheese</p>
+          <div class="product-detail">
+            <ul class="product-text">
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="bag-add-outline"
+                  ></ion-icon>
+                  <p>Piece: <span>1</span> kg</p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="pricetag-outline"
+                  ></ion-icon>
+                  <p>Price: <span>$8</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <button class="btn add-to-cart-btn">Add to cart</button>
+                  <button class="product-fav-btn">
+                    <ion-icon
+                      class="my-favorites-icon"
+                      name="heart-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <img class="product-img" src="Img/Egg.jpg" />
+          <p class="product-title">Egg</p>
+          <div class="product-detail">
+            <ul class="product-text">
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="bag-add-outline"
+                  ></ion-icon>
+                  <p>Piece: <span>12</span> pcs</p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="pricetag-outline"
+                  ></ion-icon>
+                  <p>Price: <span>$2</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <button class="btn add-to-cart-btn">Add to cart</button>
+                  <button class="product-fav-btn">
+                    <ion-icon
+                      class="my-favorites-icon"
+                      name="heart-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <img class="product-img" src="Img/Tomato.jpg" />
+          <p class="product-title">Tomato</p>
+          <div class="product-detail">
+            <ul class="product-text">
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="bag-add-outline"
+                  ></ion-icon>
+                  <p>Piece: <span>1</span> kg</p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="pricetag-outline"
+                  ></ion-icon>
+                  <p>Price: <span>$5</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <button class="btn add-to-cart-btn">Add to cart</button>
+                  <button class="product-fav-btn">
+                    <ion-icon
+                      class="my-favorites-icon"
+                      name="heart-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <img class="product-img" src="Img/Parsley.jpg" />
+          <p class="product-title">Parsley</p>
+          <div class="product-detail">
+            <ul class="product-text">
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="bag-add-outline"
+                  ></ion-icon>
+                  <p>Piece: <span>1</span> bunch</p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="pricetag-outline"
+                  ></ion-icon>
+                  <p>Price: <span>$3</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <button class="btn add-to-cart-btn">Add to cart</button>
+                  <button class="product-fav-btn">
+                    <ion-icon
+                      class="my-favorites-icon"
+                      name="heart-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <img class="product-img" src="Img/Bread.jpg" />
+          <p class="product-title">Bread</p>
+          <div class="product-detail">
+            <ul class="product-text">
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="bag-add-outline"
+                  ></ion-icon>
+                  <p>Piece: <span>1</span> bread</p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="pricetag-outline"
+                  ></ion-icon>
+                  <p>Price: <span>$2</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <button class="btn add-to-cart-btn">Add to cart</button>
+                  <button class="product-fav-btn">
+                    <ion-icon
+                      class="my-favorites-icon"
+                      name="heart-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <img class="product-img" src="Img/Butter.jpg" />
+          <p class="product-title">Butter</p>
+          <div class="product-detail">
+            <ul class="product-text">
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="bag-add-outline"
+                  ></ion-icon>
+                  <p>Piece: <span>250</span> g</p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="pricetag-outline"
+                  ></ion-icon>
+                  <p>Price: <span>$4</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <button class="btn add-to-cart-btn">Add to cart</button>
+                  <button class="product-fav-btn">
+                    <ion-icon
+                      class="my-favorites-icon"
+                      name="heart-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <img class="product-img" src="Img/Milk.jpg" />
+          <p class="product-title">Milk</p>
+          <div class="product-detail">
+            <ul class="product-text">
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="bag-add-outline"
+                  ></ion-icon>
+                  <p>Piece: <span>1</span> lt</p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="pricetag-outline"
+                  ></ion-icon>
+                  <p>Price: <span>$2</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <button class="btn add-to-cart-btn">Add to cart</button>
+                  <button class="product-fav-btn">
+                    <ion-icon
+                      class="my-favorites-icon"
+                      name="heart-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <img class="product-img" src="Img/Olive.jpg" />
+          <p class="product-title">Olive</p>
+          <div class="product-detail">
+            <ul class="product-text">
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="bag-add-outline"
+                  ></ion-icon>
+                  <p>Piece: <span>500</span> g</p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <ion-icon
+                    class="product-icon"
+                    name="pricetag-outline"
+                  ></ion-icon>
+                  <p>Price: <span>$12</span></p>
+                </div>
+              </li>
+              <li>
+                <div class="product-flex">
+                  <button class="btn add-to-cart-btn">Add to cart</button>
+                  <button class="product-fav-btn">
+                    <ion-icon
+                      class="my-favorites-icon"
+                      name="heart-outline"
+                    ></ion-icon>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p class="copyright">
+          Copyright &copy; <span class="current-year">Current year</span> by
+          Mustafa Ceylan, All rights reserved.
+        </p>
+      </footer>
+    </div>
+    <div class="cart-popup hidden">
+      <div class="cart-content">
+        <div class="cart-popup-header">
+          <h2 class="cart-header">My Cart</h2>
+          <ion-icon class="close-cart-icon" name="close-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="cart-item-list-container">
+        <p class="cart-item-list-empty">
+          Your cart is empty now. You can add a product your cart.
+        </p>
+        <ul class="cart-item-list"></ul>
+      </div>
+      <div class="payout-container">
+        <p class="total-price-text">Total Price: 0$</p>
+        <div class="payout-flex">
+          <ion-icon class="payout-icon" name="card-outline"></ion-icon>
+          <button class="payout-btn">Pay out</button>
+        </div>
+      </div>
+    </div>
+    <div class="payout-completed-container hidden">
+      <h2 class="payout-completed-text">
+        Payment successful. Thank you for choosing us.
+      </h2>
+      <button class="payout-completed-btn">Okay</button>
+    </div>
+  </body>
+</html>
